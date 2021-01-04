@@ -1,0 +1,297 @@
+@font-face
+{
+   font-family: "Antonio";
+   src: url(../fonts/antonio/Antonio-Regular.ttf) format("opentype");
+}
+
+@font-face
+{
+   font-family: "Antonio Bold";
+   src: url(../fonts/antonio/Antonio-Bold.ttf) format("opentype");
+}
+
+@font-face
+{
+   font-family: "Roboto";
+   src: url(../fonts/roboto/Roboto-Regular.ttf) format("opentype");
+}
+
+@font-face
+{
+   font-family: "Roboto Black";
+   src: url(../fonts/roboto/Roboto-Black.ttf) format("opentype");
+}
+
+@font-face
+{
+   font-family: "Roboto Light";
+   src: url(../fonts/roboto/Roboto-Light.ttf) format("opentype");
+}
+
+.page {
+    position: relative;
+    background-color: #051F32;
+}
+
+#cover {
+    width: 100%;
+    height: 100vh;
+    background-color: #051F32;
+    background-image: url(../images/fondo-portada.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+#logo-main {
+    width: 125px;
+    height: 125px;
+    background-image: url(../images/Escudo_SSKFC.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin: 100px auto;
+    cursor: pointer;
+}
+
+.nav-main {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #051F32;
+    z-index: 9999;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style-type:none;
+    position:relative;
+    width: 250px!important;
+    height: 80px!important;
+    background-color: #051F32!important;
+}
+                
+li a{
+    text-decoration:none;
+    display:inline-block;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 125px;
+    height: 30px;
+    color:#fff;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+            
+li a:hover{
+    color:#FEC745;
+    background-color: #051F32;
+}
+    
+.nav-main li ul{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 250px;
+}
+            
+.nav-main li:hover ul{display:block;}
+
+#player {
+    width: 413px;
+    height: 700px;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-image: url(../images/player.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+#social {
+    position: absolute;
+    right: 150px;
+    top: 100px;
+    width: 40px;
+    height: auto;
+    z-index: 9999;
+}
+
+.social-item {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+#social-fb {
+    background-image: url(../images/facebook.png);
+}
+
+#social-in {
+    background-image: url(../images/instagram.png);
+}
+
+#social-yt {
+    background-image: url(../images/youtube.png);
+}
+
+#social-tw {
+    background-image: url(../images/twitter.png);
+}
+
+#origin {
+    display:none;
+    width: 100%;
+    height: 100vh;
+    background-color: #051F32;
+    background-image: url(../images/fondo-origen.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+#video-content {
+    width: 600px;
+    max-height: 750px;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.title-section {
+    font-family: 'Antonio', sans-serif;
+    font-size: 90px;
+    letter-spacing: 20px;
+    color: #FEC745;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#video {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+.line {
+    border-bottom: 2px solid #fff;
+}
+
+#txt-origin {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#start {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: #051F32;
+    background-image: url(../images/fondo-ini.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.start-content {
+    width: 70%;
+    max-height: 750px;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 80px;
+    right: 0px;
+}
+
+.subtitle-section {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 35px;
+    letter-spacing: 6px;
+    color: #FEC745;
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+.subtitle-section span {
+    font-family: 'Roboto Black', sans-serif;
+    letter-spacing: 10px;
+}
+
+.text-start-content {
+    width: 50%;
+    float: left;
+}
+
+.download-info {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.download-info img {
+    position: relative;
+    top: 8px;
+    right: 8px;
+}
+
+.download-info a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.txt-ini {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 50px;
+    letter-spacing: 2px;
+}
+
+#select {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: #051F32;
+    background-image: url(../images/fondo-selec.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+#student {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: #051F32;
+    background-image: url(../images/fondo-selec.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+}
