@@ -60,9 +60,13 @@
     height: 100%;
     position: absolute;
     left: 0;
-    background-color: #051F32;
+    background-color: rgba(5, 31, 50, 0.6);
     z-index: 9999;
     font-family: 'Roboto', sans-serif;
+}
+
+.principal-item {
+    background-color: transparent!important;
 }
 
 li {
@@ -70,7 +74,7 @@ li {
     position:relative;
     width: 250px!important;
     height: 80px!important;
-    background-color: #051F32!important;
+    background-color: rgba(5, 31, 50, 0.6)!important;
 }
                 
 li a{
@@ -92,7 +96,6 @@ li a{
             
 li a:hover{
     color:#FEC745;
-    background-color: #051F32;
 }
     
 .nav-main li ul{
