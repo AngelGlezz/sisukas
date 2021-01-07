@@ -33,9 +33,13 @@
     background-color: #051F32;
 }
 
+.principal-section {
+    overflow: hidden!important;
+}
+
 #cover {
     width: 100%;
-    height: 100vh;
+    height: 1350px;
     background-color: #051F32;
     background-image: url(../images/fondo-portada.png);
     background-repeat: no-repeat;
@@ -58,7 +62,7 @@
 .nav-main {
     width: 250px;
     height: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
     background-color: rgba(5, 31, 50, 0.6);
     z-index: 9999;
@@ -148,7 +152,7 @@ li a:hover{
 }
 
 #social {
-    position: absolute;
+    position: fixed;
     right: 50px;
     top: 100px;
     width: 40px;
@@ -200,7 +204,7 @@ li a:hover{
 #origin {
     display:none;
     width: 100%;
-    height: 100vh;
+    height: 1350px;
     background-color: #051F32;
     background-image: url(../images/fondo-origen.png);
     background-repeat: no-repeat;
@@ -250,7 +254,7 @@ li a:hover{
 #start {
     display: none;
     width: 100%;
-    height: 100vh;
+    height: 1350px;
     background-color: #051F32;
     background-image: url(../images/fondo-ini.png);
     background-repeat: no-repeat;
@@ -261,7 +265,7 @@ li a:hover{
 
 .start-content {
     width: 70%;
-    max-height: 750px;
+    height: 750px;
     position: absolute!important;
     margin: auto;
     top: 0px;
@@ -319,7 +323,7 @@ li a:hover{
 #select {
     display: none;
     width: 100%;
-    height: 100vh;
+    height: 1350px;
     background-color: #051F32;
     background-image: url(../images/fondo-selec.png);
     background-repeat: no-repeat;
@@ -331,7 +335,7 @@ li a:hover{
 #student {
     display: none;
     width: 100%;
-    height: 100vh;
+    height: 1350px;
     background-color: #051F32;
     background-image: url(../images/fondo-ex.png);
     background-repeat: no-repeat;
@@ -343,7 +347,7 @@ li a:hover{
 #galery {
     display: none;
     width: 100%;
-    height: 100vh;
+    height: 1350px;
     background-color: #051F32;
     background-image: url(../images/fondo-portada.png);
     background-repeat: no-repeat;
@@ -352,8 +356,166 @@ li a:hover{
     position: relative;
 }
 
-/** carrousel **/
+.galery-content .start-content {
+    height: 420px;
+}
 
+.item-galery {
+    height: 100%;
+    padding: 0px 15px;
+    position: relative;
+    cursor: pointer;
+}
 
+.item-galery img {
+    width: 100%;
+}
 
-/** carrousel **/
+.content-competition {
+    position: absolute;
+    bottom: 10000px;
+    width: 96%;
+    height: 180px;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 9999;
+}
+
+.item-galery:hover .content-competition {
+    bottom: 0px;
+}
+
+.content-competition .title-section {
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+.content-competition .txt-ini {
+    margin-top: 15px;
+}
+
+.content-competition .line {
+    width: 270px;
+}
+
+#disney-comp {
+    display: none;
+    width: 100%;
+    height: 1350px;
+    background-color: #051F32;
+    background-image: url(../images/fondo-portada.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+#disney-comp .start-content {
+    height: 100%!important;
+    margin-top: 150px;
+}
+
+.date-galery {
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#disney-comp .start-content .txt-ini {
+    float: left;
+    text-align: justify;
+}
+
+#disney-comp .start-content .text-start-content {
+    width: 60%;
+}
+
+#disney-comp .start-content .download-info {
+    width: 40%;
+}
+
+.item-intern-galery {
+    width: 23%;
+    height: 180px;
+    margin: 1%;
+    float: left;
+    position: relative;
+}
+
+.img-galery-h img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-galery-v img {
+    width: 120px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#english-comp {
+    display: none;
+    width: 100%;
+    height: 1350px;
+    background-color: #051F32;
+    background-image: url(../images/fondo-portada.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+#english-comp .start-content {
+    height: 100%!important;
+    margin-top: 150px;
+}
+
+#english-comp .start-content .txt-ini {
+    float: left;
+    text-align: justify;
+}
+
+#english-comp .start-content .text-start-content {
+    width: 60%;
+}
+
+#english-comp .start-content .download-info {
+    width: 40%;
+}
+
+#winner-comp {
+    display: none;
+    width: 100%;
+    height: 2000px;
+    background-color: #051F32;
+    background-image: url(../images/fondo-portada.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+#winner-comp .start-content {
+    height: 100%!important;
+    margin-top: 150px;
+}
+
+#winner-comp .start-content .txt-ini {
+    float: left;
+    text-align: justify;
+}
+
+#winner-comp .start-content .text-start-content {
+    width: 60%;
+}
+
+#winner-comp .start-content .download-info {
+    width: 40%;
+}
+
+#winner-comp .start-content .text-start-content .title-section {
+    font-size: 53px;
+    letter-spacing: 11px;
+}

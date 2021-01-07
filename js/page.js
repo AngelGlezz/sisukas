@@ -24,6 +24,21 @@ $(document).ready(function(){
         $("#cover").fadeIn("slow");
     });
 
+    $("#disney-galery").click(function(){
+        $(".principal-section").hide();
+        $("#disney-comp").fadeIn("slow");
+    });
+
+    $("#english-galery").click(function(){
+        $(".principal-section").hide();
+        $("#english-comp").fadeIn("slow");
+    });
+
+    $("#winner-galery").click(function(){
+        $(".principal-section").hide();
+        $("#winner-comp").fadeIn("slow");
+    });
+
     $("#eventos").click(function(){
         $(".principal-section").hide();
         $("#galery").fadeIn("slow");
@@ -37,7 +52,7 @@ $(document).ready(function(){
     
         setTimeout(function() {
             $('.lazy').slick({
-                slidesToShow: 3,
+                slidesToShow: 2,
                 slidesToScroll: 1,
             })
         }, 20);
