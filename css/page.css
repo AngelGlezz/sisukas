@@ -215,8 +215,8 @@ li a:hover{
 
 .video-content {
     width: 600px;
-    max-height: 780px;
-    position: absolute;
+    height: 780px;
+    position: absolute!important;
     margin: auto;
     top: 0px;
     bottom: 0px;

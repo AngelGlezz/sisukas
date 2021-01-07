@@ -2,6 +2,7 @@ $(document).ready(function(){
     $("#origen").click(function(){
         $(".principal-section").hide();
         $("#origin").fadeIn("slow");
+        $('.carousel').slick();
     });
 
     $("#iniciacion").click(function(){
@@ -69,4 +70,8 @@ $(document).ready(function(){
     }).mouseleave(function(){
         $("#text-cover").css({"z-index": "1", "background-image": "url(images/conocenos.png)"});
     });
+
+    $(".winner_group").fancybox();
+	$(".disney_group").fancybox();
+    $(".english_group").fancybox();
 });
