@@ -140,6 +140,7 @@ li a:hover{
     background-position: center;
     background-size: 100% 100%;
     z-index: 1;
+    cursor: pointer;
 }
 
 #player {
@@ -152,6 +153,7 @@ li a:hover{
     background-size: 100% 100%;
     z-index: 2;
     position: relative;
+    cursor: pointer;
 }
 
 #social {
@@ -469,6 +471,74 @@ li a:hover{
 #winner-comp .start-content .text-start-content .title-section {
     font-size: 53px;
     letter-spacing: 11px;
+}
+
+#contact {
+    background-image: url(../images/fondo-portada.png);
+}
+
+#contact .start-content {
+    height: 630px;
+}
+
+#content-form, #form-name, #msg-item {
+    width: 100%;
+    overflow: hidden;
+}
+
+.name-item {
+    width: 48%;
+    float: left;
+}
+
+.name-item:nth-child(1) {
+    margin-right: 4%;
+}
+
+#mail-item {
+    width: 100%;
+    margin: 20px 0px;
+}
+
+#msg-item textarea {
+    width: 100%;
+    height: 160px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none!important;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#button-send {
+	width: 130px;
+	height: 35px;
+	text-align: center;
+	background-color: #FEC745;
+	color: #fff;
+	border: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+label {
+    color: #fff;
+    font-size: 20px!important;
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none!important;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 @media screen and (max-width: 1400px) {

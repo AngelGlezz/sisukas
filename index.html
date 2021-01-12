@@ -413,6 +413,39 @@
 					</div>
 				</div>
 			</div>
+			<div id="contact" class="principal-section">
+				<div class="start-content">
+					<div class="text-start-content" style="float: none;">
+						<div class="title-section">Contacto</div>
+					</div>
+					<div id="content-form">
+						<form id="form-register" action="registerUser.php" method="post">
+							<div id="form-name">
+								<div class="name-item">
+									<label>Nombre</label>
+									<input type="text" name="name" required>
+								</div>
+								<div class="name-item">
+									<label>Apellido</label>
+									<input type="text" name="lastname" required>
+								</div>
+							</div>
+							<div id="mail-item">
+								<label>Correo</label>
+								<input type="email" name="email" required>
+							</div>
+							<div id="msg-item">
+								<label>Mensaje</label>
+								<textarea></textarea>
+							</div>
+							<button type="button" id="button-send">Enviar</button>
+						</form>
+						<div id="form-loader" style="text-align: center; margin-top: 10px; display: none;">
+							<img style="height: 50px;width: 50px;" src="images/loader.gif">
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="js/slick.min.js"></script>

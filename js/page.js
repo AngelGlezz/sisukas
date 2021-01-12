@@ -10,6 +10,16 @@ $(document).ready(function(){
         $("#start").fadeIn("slow");
     });
 
+    $("#text-cover").click(function(){
+        $(".principal-section").hide();
+        $("#select").fadeIn("slow");
+    });
+
+    $("#player").click(function(){
+        $(".principal-section").hide();
+        $("#select").fadeIn("slow");
+    });
+
     $("#selecciones").click(function(){
         $(".principal-section").hide();
         $("#select").fadeIn("slow");
@@ -38,6 +48,11 @@ $(document).ready(function(){
     $("#winner-galery").click(function(){
         $(".principal-section").hide();
         $("#winner-comp").fadeIn("slow");
+    });
+
+    $("#contacto").click(function(){
+        $(".principal-section").hide();
+        $("#contact").fadeIn("slow");
     });
 
     $("#eventos").click(function(){
