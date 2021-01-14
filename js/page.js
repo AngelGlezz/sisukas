@@ -25,6 +25,11 @@ $(document).ready(function(){
         $("#select").fadeIn("slow");
     });
 
+    $(".more-info").click(function(){
+        $(".principal-section").hide();
+        $("#select").fadeIn("slow");
+    });
+
     $("#exalumnos").click(function(){
         $(".principal-section").hide();
         $("#student").fadeIn("slow");
@@ -53,6 +58,11 @@ $(document).ready(function(){
     $("#contacto").click(function(){
         $(".principal-section").hide();
         $("#contact").fadeIn("slow");
+    });
+
+    $("#faqs").click(function(){
+        $(".principal-section").hide();
+        $("#faq").fadeIn("slow");
     });
 
     $("#eventos").click(function(){
@@ -95,6 +105,56 @@ $(document).ready(function(){
         $("#text-cover").css({"z-index": "3", "background-image": "url(images/conocenos-a.png)"});
     }).mouseleave(function(){
         $("#text-cover").css({"z-index": "1", "background-image": "url(images/conocenos.png)"});
+    });
+
+    $("#social-fb").mouseenter(function() {
+        $("#social-fb img").attr('src', 'images/facebook-a.png');
+    }).mouseleave(function() {
+        $("#social-fb img").attr('src', 'images/facebook.png');
+    });
+
+    $("#social-in").mouseenter(function() {
+        $("#social-in img").attr('src', 'images/instagram-a.png');
+    }).mouseleave(function() {
+        $("#social-in img").attr('src', 'images/instagram.png');
+    });
+
+    $("#social-yt").mouseenter(function() {
+        $("#social-yt img").attr('src', 'images/youtube-a.png');
+    }).mouseleave(function() {
+        $("#social-yt img").attr('src', 'images/youtube.png');
+    });
+
+    $("#social-tw").mouseenter(function() {
+        $("#social-tw img").attr('src', 'images/twitter-a.png');
+    }).mouseleave(function() {
+        $("#social-tw img").attr('src', 'images/twitter.png');
+    });
+
+    $("#quest-1").click(function() {
+        $("#answer-1").slideToggle( "slow" );
+        if ($(this).find('span').hasClass('arrow-right'))
+            {
+            $(this).find('span').removeClass('arrow-right');
+            $(this).find('span').addClass('arrow-down');
+        }
+        else {
+            $(this).find('span').addClass('arrow-right');
+            $(this).find('span').removeClass('arrow-down');
+        }
+    });
+
+    $("#quest-2").click(function() {
+        $("#answer-2").slideToggle( "slow" );
+        if ($(this).find('span').hasClass('arrow-right'))
+            {
+            $(this).find('span').removeClass('arrow-right');
+            $(this).find('span').addClass('arrow-down');
+        }
+        else {
+            $(this).find('span').addClass('arrow-right');
+            $(this).find('span').removeClass('arrow-down');
+        }
     });
 
     $(".winner_group").fancybox();
