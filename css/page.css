@@ -72,25 +72,48 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.navbar-expand-md {
+    display: none!important;
+    background-color: rgba(5, 31, 50, 0.6)!important;
+}
+
+.dropdown-menu {
+    background-color: transparent!important;
+}
+
+.dropdown-item {
+    color: #FEC745!important;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dropdown-item:hover {
+    background-color: transparent!important;
+}
+
 .principal-item {
     background-color: transparent!important;
 }
 
-li {
+.principal-item {
     list-style-type:none;
     position:relative;
     width: 250px!important;
     height: 80px!important;
+}
+
+.intern-item {
     background-color: rgba(5, 31, 50, 0.6)!important;
 }
                 
-li a{
-    text-decoration:none;
+.principal-item a{
+    text-decoration:none!important;
     display:inline-block;
     font-size: 20px;
     text-align: center;
     text-transform: uppercase;
-    width: 125px;
+    width: 150px;
     height: 30px;
     color:#fff;
     position: absolute;
@@ -101,22 +124,43 @@ li a{
     right: 0px;
 }
             
-li a:hover{
+.principal-item a:hover{
     color:#FEC745;
     border-bottom: 2px solid #FEC745;
+    font-family: 'Roboto Black', sans-serif;
+    letter-spacing: 2px;
 }
     
-.nav-main li ul{
+.nav-main .principal-item ul{
     display: none;
     position: absolute;
     top: 0px;
     left: 250px;
 }
             
-.nav-main li:hover ul{display:block;}
+.nav-main .principal-item:hover ul{display:block;}
+
+.navbar-brand {
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/Escudo_SSKFC.png);
+    background-size: 100% 100%;
+}
+
+.navbar-toggler-icon {
+    background-image: url(../images/iconmenu.png) !important;
+}
+
+.nav-link {
+    color: #FEC745 !important;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
 
 #content-cover {
-    width: 80%;
+    width: 1500px;
     height: 700px;
     position: absolute;
     margin: auto;
@@ -180,7 +224,7 @@ li a:hover{
 
 .video-content {
     width: 600px;
-    height: 780px;
+    height: 840px;
     position: absolute!important;
     margin: auto;
     top: 0px;
@@ -216,7 +260,7 @@ li a:hover{
 
 .txt-origin {
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     color: #fff;
     margin-top: 20px;
     width: 100%;
@@ -355,6 +399,12 @@ li a:hover{
     margin-top: 150px;
 }
 
+.intern-galery {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
 .date-galery {
     font-size: 20px;
     color: #fff;
@@ -398,6 +448,7 @@ li a:hover{
 
 #english-comp {
     background-image: url(../images/fondo-portada.jpg);
+    height: 1300px;
 }
 
 #english-comp .start-content {
@@ -419,13 +470,13 @@ li a:hover{
 }
 
 #winner-comp {
-    height: 2000px;
+    height: 1900px;
     background-image: url(../images/fondo-portada.jpg);
 }
 
 #winner-comp .start-content {
-    height: 100%!important;
     margin-top: 150px;
+    height: 100%!important;
 }
 
 #winner-comp .start-content .txt-ini {
@@ -444,6 +495,10 @@ li a:hover{
 #winner-comp .start-content .text-start-content .title-section {
     font-size: 53px;
     letter-spacing: 11px;
+}
+
+#winner-comp .start-content .intern-galery {
+    height: 1300px;
 }
 
 #win {
@@ -519,8 +574,21 @@ input {
     font-family: 'Roboto', sans-serif;
 }
 
+#txt-final {
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#txt-final span {
+    color: #FEC745;
+}
+
 #faq {
     background-image: url(../images/fondo-portada.jpg);
+    min-height: 1100px;
 }
 
 .faq-content {
@@ -543,7 +611,7 @@ input {
 }
 
 #quest-content {
-    width: 93%;
+    width: 90%;
     margin-top: 50px;
 }
 
@@ -593,7 +661,31 @@ input {
     margin-left: 10px;
 }
 
+@media screen and (max-width: 1850px) {
+    #content-cover {
+        width: 1050px;
+    }
+
+    #text-cover {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    #faq {
+        min-height: 1250px;
+    }
+}
+
 @media screen and (max-width: 1400px) {
+    #content-cover {
+        width: 850px;
+    }
+
+    #text-cover {
+        height: 180px;
+    }
+
     .start-content {
         left: auto;
         right: 110px;
@@ -605,6 +697,14 @@ input {
 }
 
 @media screen and (max-width: 1200px) {
+    #content-cover {
+        width: 650px;
+    }
+
+    #text-cover {
+        height: 150px;
+    }
+
     .video-content {
         right: 110px;
         left: auto;
@@ -644,19 +744,35 @@ input {
         letter-spacing: 5px;
     }
 
+    #win {
+        font-size: 25px;
+    }
+
     .content-competition .txt-ini {
         font-size: 14px;
+    }
+
+    #faq {
+        min-height: 1400px;
     }
 }
 
 @media screen and (max-width: 1100px) {
     .title-section {
-        font-size: 65px;
+        font-size: 55px;
         letter-spacing: 5px;
     }
 }
 
 @media screen and (max-width: 1000px) {
+    #content-cover {
+        width: 550px;
+    }
+
+    #text-cover {
+        height: 140px;
+    }
+
     .video-content {
         width: 380px;
     }
@@ -697,8 +813,17 @@ input {
         letter-spacing: 2px;
     }
 
-    #disney-comp .start-content .text-start-content {
+    #disney-comp .start-content .text-start-content, #english-comp .start-content .text-start-content, #winner-comp .start-content .text-start-content {
         width: 100%;
+    }
+
+    #winner-comp .start-content .text-start-content .title-section {
+        font-size: 47px;
+        letter-spacing: 6px;
+    }
+
+    .txt-ini {
+        float: none;
     }
 
     .item-intern-galery {
@@ -706,17 +831,95 @@ input {
     }
 
     #disney-comp {
-        height: 2100px;
+        height: 2200px;
+    }
+
+    #english-comp {
+        height: 2250px;
+    }
+
+    #winner-comp {
+        height: 3150px;
     }
 
     #disney-comp .start-content {
         margin-top: 50px;
     }
+
+    #winner-comp .start-content .intern-galery {
+        height: 2300px;
+    }
+
+    .name-item {
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    #faq {
+        min-height: 1600px;
+    }
 }
 
 @media screen and (max-width: 900px) {
     #content-cover {
-        width: 95%;
+        width: 400px;
+        height: 400px;
+    }
+
+    #text-cover {
+        height: 100px;
+    }
+
+    #player {
+        width: 250px;
+    }
+
+    #faq {
+        min-height: 1850px;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    #student .start-content {
+        height: 860px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-expand-md {
+        display: flex!important;
+    }
+
+    .nav-main {
+        display: none;
+    }
+
+    #content-cover {
         left: 0px;
+    }
+
+    .video-content, .start-content {
+        left: 0px;
+        right: 0px;
+        top: 65px;
+    }
+
+    #student .start-content, #english-comp .start-content, #winner-comp .start-content {
+        top: 110px;
+        margin: auto;
+    }
+
+    #disney-comp {
+        overflow: hidden;
+        height: 2200px;
+    }
+
+    #faq {
+        min-height: 2200px;
+    }
+
+    .faq-content {
+        margin: 65px auto auto auto;
+        width: 90%;
     }
 }
