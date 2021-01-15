@@ -879,18 +879,12 @@ input {
     }
 }
 
-@media screen and (max-width: 775px) {
-    #student .start-content {
-        height: 860px;
-    }
-}
-
 @media screen and (max-width: 767px) {
     .navbar-expand-md {
         display: flex!important;
     }
 
-    .nav-main {
+    .nav-main, #social {
         display: none;
     }
 
@@ -901,12 +895,22 @@ input {
     .video-content, .start-content {
         left: 0px;
         right: 0px;
-        top: 65px;
+        top: 0px;
+        margin-top: 65px;
+    }
+
+    .start-content {
+        height: 675px;
+    }
+
+    #select {
+        height: 1100px;
     }
 
     #student .start-content, #english-comp .start-content, #winner-comp .start-content {
-        top: 110px;
+        top: 0px;
         margin: auto;
+        margin-top: 110px;
     }
 
     #disney-comp {
@@ -921,5 +925,32 @@ input {
     .faq-content {
         margin: 65px auto auto auto;
         width: 90%;
+    }
+
+    .download-info {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #content-cover {
+        width: 300px;
+    }
+
+    .video-content {
+        width: 80%;
+    }
+
+    .title-section {
+        font-size: 40px;
+    }
+
+    #select {
+        height: 920px;
+    }
+
+    .start-content {
+        width: 90%;
+        height: 850px;
     }
 }
