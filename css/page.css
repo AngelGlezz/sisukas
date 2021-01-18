@@ -37,7 +37,7 @@
     overflow: hidden!important;
     width: 100%;
     height: 100vh;
-    min-height: 800px;
+    min-height: 900px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -363,7 +363,7 @@
 
 .content-competition {
     position: absolute;
-    bottom: 10000px;
+    bottom: -500px;
     width: 100%;
     height: 180px;
     background-color: rgba(5, 31, 50, 0.7);
@@ -661,6 +661,15 @@ input {
     margin-left: 10px;
 }
 
+.slick-prev, .slick-next {
+    width: 40px!important;
+    height: 40px!important;
+}
+
+.slick-prev::before, .slick-next::before {
+    font-size: 40px!important;
+}
+
 @media screen and (max-width: 1850px) {
     #content-cover {
         width: 1050px;
@@ -903,6 +912,10 @@ input {
         height: 675px;
     }
 
+    #galery .galery-content .start-content {
+        margin-top: auto;
+    }
+
     #select {
         height: 1100px;
     }
@@ -913,9 +926,17 @@ input {
         margin-top: 110px;
     }
 
+    #student {
+        height: 1050px;
+    }
+
     #disney-comp {
         overflow: hidden;
         height: 2200px;
+    }
+
+    .content-competition {
+        bottom: -100px;
     }
 
     #faq {
@@ -932,6 +953,21 @@ input {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .start-content, #galery .galery-content .start-content {
+        width: 90%!important;
+    }
+
+    #winner-comp .start-content .text-start-content .title-section {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+
+    #winner-comp .start-content .download-info, #disney-comp .start-content .download-info, #english-comp .start-content .download-info {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 440px) {
     #content-cover {
         width: 300px;
@@ -942,7 +978,7 @@ input {
     }
 
     .title-section {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     #select {
@@ -952,5 +988,31 @@ input {
     .start-content {
         width: 90%;
         height: 850px;
+    }
+
+    .txt-origin, .txt-ini {
+        font-size: 15px;
+    }
+
+    #galery .galery-content .start-content {
+        height: 245px;
+    }
+
+    #disney-comp .start-content {
+        margin-top: 70px;
+    }
+
+    .faq-content .text-start-content .title-section {
+        font-size: 38px;
+        letter-spacing: 2px;
+    }
+
+    .quest {
+        font-size: 20px;
+    }
+
+    .answer {
+        font-size: 15px;
+        line-height: 20px;
     }
 }
