@@ -329,7 +329,6 @@
     font-size: 17px;
     color: #fff;
     margin-top: 50px;
-    letter-spacing: 2px;
     width: 98%;
 }
 
@@ -365,7 +364,7 @@
     position: absolute;
     bottom: -500px;
     width: 100%;
-    height: 180px;
+    height: 200px;
     background-color: rgba(5, 31, 50, 0.7);
     z-index: 9999;
     padding: 0px 10px;
@@ -377,7 +376,7 @@
 }
 
 .content-competition .title-section {
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: 10px;
 }
 
@@ -588,12 +587,13 @@ input {
 
 #faq {
     background-image: url(../images/fondo-portada.jpg);
-    min-height: 1100px;
+    overflow: auto!important;
 }
 
 .faq-content {
     margin-left: 300px;
     margin-top: 100px;
+    padding-bottom: 50px!important;
 }
 
 .faq-content .text-start-content {
@@ -670,6 +670,40 @@ input {
     font-size: 40px!important;
 }
 
+#boxes .window {
+    position:fixed;
+    width:440px;
+    height:200px;
+    display:none;
+    z-index:9999;
+    padding:20px;
+}
+
+/* Customize your modal window here, you can add background image too */
+#boxes #dialog {
+    width:300px;
+    height:185px;
+}
+
+#ok_btn {
+    clear: both;
+    background-color: #0f35d7;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: auto;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Helvetica',sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 30px;
+    opacity: 1;
+}
+
 @media screen and (max-width: 1850px) {
     #content-cover {
         width: 1050px;
@@ -677,12 +711,6 @@ input {
 
     #text-cover {
         height: 220px;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    #faq {
-        min-height: 1250px;
     }
 }
 
@@ -748,6 +776,10 @@ input {
         height: 240px;
     }
 
+    .content-competition {
+        height: 150px;
+    }
+
     .content-competition .title-section {
         font-size: 28px;
         letter-spacing: 5px;
@@ -758,11 +790,7 @@ input {
     }
 
     .content-competition .txt-ini {
-        font-size: 14px;
-    }
-
-    #faq {
-        min-height: 1400px;
+        font-size: 12px;
     }
 }
 
@@ -863,10 +891,6 @@ input {
         width: 100%;
         margin: 10px 0px;
     }
-
-    #faq {
-        min-height: 1600px;
-    }
 }
 
 @media screen and (max-width: 900px) {
@@ -881,10 +905,6 @@ input {
 
     #player {
         width: 250px;
-    }
-
-    #faq {
-        min-height: 1850px;
     }
 }
 
@@ -939,8 +959,8 @@ input {
         bottom: -100px;
     }
 
-    #faq {
-        min-height: 2200px;
+    .winner-galery .content-competition {
+        bottom: -60px;
     }
 
     .faq-content {
@@ -965,6 +985,10 @@ input {
 
     #winner-comp .start-content .download-info, #disney-comp .start-content .download-info, #english-comp .start-content .download-info {
         width: 100%;
+    }
+
+    .content-competition {
+        bottom: 0px!important;
     }
 }
 
@@ -1001,6 +1025,27 @@ input {
     #disney-comp .start-content {
         margin-top: 70px;
     }
+
+    .content-competition .line {
+        display: none;
+    }
+
+    .content-competition .title-section {
+        margin-top: 15px;
+    }
+
+    #win {
+        margin-top: 0px;
+    }
+
+    .content-competition {
+        bottom: -80px!important;
+    }
+
+    .winner-galery .content-competition {
+        bottom: -70px!important;
+    }
+    
 
     .faq-content .text-start-content .title-section {
         font-size: 38px;

@@ -1,13 +1,19 @@
 $(document).ready(function(){
-    $("#origen").click(function(){
+    $(".winner_group").fancybox();
+	$(".disney_group").fancybox();
+    $(".english_group").fancybox();
+    
+    $(".origen").click(function(){
         $(".principal-section").hide();
         $("#origin").fadeIn("slow");
         $('.carousel').slick();
+        $('#navbarTogglerDemo02').removeClass('show');
     });
 
-    $("#iniciacion").click(function(){
+    $(".iniciacion").click(function(){
         $(".principal-section").hide();
         $("#start").fadeIn("slow");
+        $('#navbarTogglerDemo02').removeClass('show');
     });
 
     $("#text-cover").click(function(){
@@ -20,9 +26,10 @@ $(document).ready(function(){
         $("#select").fadeIn("slow");
     });
 
-    $("#selecciones").click(function(){
+    $(".selecciones").click(function(){
         $(".principal-section").hide();
         $("#select").fadeIn("slow");
+        $('#navbarTogglerDemo02').removeClass('show');
     });
 
     $(".more-info").click(function(){
@@ -30,9 +37,10 @@ $(document).ready(function(){
         $("#select").fadeIn("slow");
     });
 
-    $("#exalumnos").click(function(){
+    $(".exalumnos").click(function(){
         $(".principal-section").hide();
         $("#student").fadeIn("slow");
+        $('#navbarTogglerDemo02').removeClass('show');
     });
 
     $("#logo-main").click(function(){
@@ -55,19 +63,22 @@ $(document).ready(function(){
         $("#winner-comp").fadeIn("slow");
     });
 
-    $("#contacto").click(function(){
+    $(".contacto").click(function(){
         $(".principal-section").hide();
         $("#contact").fadeIn("slow");
+        $('#navbarTogglerDemo02').removeClass('show');
     });
 
-    $("#faqs").click(function(){
+    $(".faqs").click(function(){
         $(".principal-section").hide();
         $("#faq").fadeIn("slow");
+        $('#navbarTogglerDemo02').removeClass('show');
     });
 
-    $("#eventos").click(function(){
+    $(".eventos").click(function(){
         $(".principal-section").hide();
         $("#galery").fadeIn("slow");
+        $('#navbarTogglerDemo02').removeClass('show');
 
         $('.lazy').slick({
             slidesToShow: 3,
@@ -157,7 +168,117 @@ $(document).ready(function(){
         }
     });
 
-    $(".winner_group").fancybox();
-	$(".disney_group").fancybox();
-    $(".english_group").fancybox();
+    $("#quest-3").click(function() {
+        $("#answer-3").slideToggle( "slow" );
+        if ($(this).find('span').hasClass('arrow-right'))
+            {
+            $(this).find('span').removeClass('arrow-right');
+            $(this).find('span').addClass('arrow-down');
+        }
+        else {
+            $(this).find('span').addClass('arrow-right');
+            $(this).find('span').removeClass('arrow-down');
+        }
+    });
+
+    $("#form-register").validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2,
+                maxlength: 100
+            },
+            lastname: {
+                required: true,
+                minlength: 2,
+                maxlength: 100
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            comment: { 
+                required: true,
+                minlength: 2,
+                maxlength: 1000
+            }
+        },
+        errorPlacement: function( error, element ) {
+            error.insertAfter(element);
+        }
+    });
+
+    $('.window .close').click(function (e) {
+        e.preventDefault();
+        $('#mask, .window').hide();
+    });
+
+    $('#mask').click(function (){
+        $(this).hide();
+        $('.window').hide();
+    });
+
+    $('#button-send').click(function(e){
+        e.preventDefault();
+        $('#form-register').submit();
+    });
+
+    $('#form-register').submit(function(event) {
+        event.preventDefault();
+
+        if($(this).valid()){
+            var formData = $(this).serialize();
+       
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: formData,
+                beforeSend: function(){
+                    $('#form-loader').show();
+                    $('#button-send').hide();
+                }
+            }).done(function(data) {
+                var json = jQuery.parseJSON(data);
+                if(json.error === undefined || json.error === ""){
+                    showBox("¡Registro exitoso!");
+                }else{
+                    showBox("Invalid data, please try again.");
+                }
+
+                $('#form-loader').hide();
+                $('#button-send').show();
+
+                clearForm();
+            });
+        }
+    });
+
+	function showBox(msg){
+	    var id = $('#dialog');
+
+	    $("#box-msg").text(msg);
+
+	    var maskHeight = $(document).height();
+	    var maskWidth = $(window).width();
+
+	    $('#mask').css({'width':maskWidth,'height':maskHeight});
+
+	    $('#mask').fadeTo("fast",0.8);
+	    $('#mask').fadeIn();
+
+	    var winH = $(window).height();
+	    var winW = $(window).width();
+
+	    $(id).css('top',  winH/2-$(id).height()/2);
+	    $(id).css('left', winW/2-$(id).width()/2);
+
+	    $(id).fadeIn();
+	}
+
+	function clearForm(){
+	    $("input[name='name']").val("");
+	    $("input[name='lastname']").val("");
+	    $("input[name='email']").val("");
+	    $("textarea[name='comment']").val("");
+    }
 });

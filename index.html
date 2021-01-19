@@ -11,6 +11,7 @@
 		<script src="js/jquery.validate.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 		<!-- CSS only -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -57,7 +58,7 @@
 			<nav class="nav-main">
 				<div id="logo-main"></div>
 				<ul>
-					<li id="origen" class="principal-item"><a href="#">Origen</a>
+					<li class="principal-item origen"><a href="#">Origen</a>
 						<!--ul>
 							<li id="mision"><a href="#">Mision</a></li>
 							<li id="vision"><a href="#">Vision</a></li>
@@ -65,16 +66,16 @@
 							<li id="familia"><a href="#" style="height: 55px;">Familia Sisukas</a></li>
 						</ul-->
 					</li>
-					<li id="conocenos" class="principal-item"><a href="#">Conócenos</a>
+					<li class="principal-item conocenos"><a href="#">Conócenos</a>
 						<ul>
-							<li id="selecciones" class="principal-item intern-item"><a href="#" style="height: 58px;">Selecciones Nacionales</a></li>
-							<li id="iniciacion" class="principal-item intern-item"><a href="#" style="height: 58px;">Iniciación al Futbol</a></li>
-							<li id="exalumnos" class="principal-item intern-item"><a href="#">Ex-Alumnos</a></li>
+							<li class="principal-item intern-item selecciones"><a href="#" style="height: 58px;">Selecciones Nacionales</a></li>
+							<li class="principal-item intern-item iniciacion"><a href="#" style="height: 58px;">Iniciación al Futbol</a></li>
+							<li class="principal-item intern-item exalumnos"><a href="#">Ex-Alumnos</a></li>
 						</ul>
 					</li>
-					<li id="eventos" class="principal-item"><a href="#">Eventos</a></li>
-					<li id="contacto" class="principal-item"><a href="#">Contacto</a></li>
-					<li id="faqs" class="principal-item"><a href="#">FAQS</a></li>
+					<li class="principal-item eventos"><a href="#">Eventos</a></li>
+					<li class="principal-item contacto"><a href="#">Contacto</a></li>
+					<li class="principal-item faqs"><a href="#">FAQS</a></li>
 					<!--li id="palmares" class="principal-item"><a href="#">Palmares</a></li-->
 				</ul>
 			</nav>
@@ -87,26 +88,26 @@
 				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 						<li class="nav-item">
-							<a class="nav-link" href="#">Origen</span></a>
+							<a class="nav-link origen" href="#">Origen</span></a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							  Conócenos
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							  <a class="dropdown-item" href="#">Selecciones Nacionales</a>
-							  <a class="dropdown-item" href="#">Iniciación al futbol</a>
-							  <a class="dropdown-item" href="#">Ex-alumnos</a>
+							  <a class="dropdown-item selecciones" href="#">Selecciones Nacionales</a>
+							  <a class="dropdown-item iniciacion" href="#">Iniciación al futbol</a>
+							  <a class="dropdown-item exalumnos" href="#">Ex-alumnos</a>
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Eventos</a>
+							<a class="nav-link eventos" href="#">Eventos</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Contacto</a>
+							<a class="nav-link contacto" href="#">Contacto</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Faqs</a>
+							<a class="nav-link faqs" href="#">Faqs</a>
 						</li>
 					  </ul>
 				</div>
@@ -216,7 +217,7 @@
 							<div class="content-competition">
 								<div class="title-section">Disney cup</div>
 								<div class="line"></div>
-								<div class="txt-ini">Lorem ipsum dolor sit amet consectetur adipiscing elit habitasse feugiat risus, semper torquent nisl</div>
+								<div class="txt-ini">Freshmans y Sophomores disfrutarán de Orlando, Florida en la participación de la Disney Cup Internacional</div>
 							</div>
 						</div>
 						<div class="item-galery" id="english-galery">
@@ -224,10 +225,10 @@
 							<div class="content-competition">
 								<div class="title-section">English cup</div>
 								<div class="line"></div>
-								<div class="txt-ini">Lorem ipsum dolor sit amet consectetur adipiscing elit habitasse feugiat risus, semper torquent nisl</div>
+								<div class="txt-ini">Manchester United será la sede de un torneo de excelente nivel deportivo donde nuestros Freshmans y Sophomores podrán mostrar todo su talento en una gran vitrina</div>
 							</div>
 						</div>
-						<div class="item-galery" id="winner-galery">
+						<div class="item-galery winner-galery" id="winner-galery">
 							<img src="images/galery-3.jpg"/>
 							<div class="content-competition">
 								<div class="title-section" id="win">Winner Kids Soccer Clinic</div>
@@ -241,14 +242,14 @@
 			<div id="disney-comp" class="principal-section">
 				<div class="start-content">
 					<div class="text-start-content">
-						<div class="title-section">Disney <span class="date-galery">Febrero 2020</span></div>
+						<div class="title-section">Disney <span class="date-galery">Julio 2021</span></div>
 						<div class="line"></div>
 					</div>
 					<div class="download-info">
 						<a href="#"><img src="images/download.png"> Descarga aquí toda la información</a>
 					</div>
 					<div class="txt-ini">
-						Este programa está especialmente reservado para jugadores con un gusto y habilidad especial para jugar futbol.   Estos jugadores entrenan por periodos de diez meses en ocho estados de la República Mexicana, con ejercicios y planes especiales diseñados por el cuerpo técnico de Sisukas FC, para ser considerados en nuestras selecciones nacionales que compiten en torneos nacionales e internacionales de gran renombre. Los candidatos y miembros deben tener entre 7 y 14 años de edad.
+						Niños y niñas de 7 a 13 años.<br>Viaje a EU (Orlando, Florida) para participar en Disney Cup International, torneo de clase mundial en el complejo ESPN Wide World of Sports, incluyendo recreación en los parques temáticos, la magia y calidad de los hoteles de Disney, filosofía de seguridad integral, valores humanos y refuerzo de hábitos positivos de Sisukas FC. Ideal para la primera experiencia internacional de nuestros jugadores.
 					</div>
 					<div class="intern-galery">
 						<div class="item-intern-galery img-galery-h">
@@ -302,14 +303,14 @@
 			<div id="english-comp" class="principal-section">
 				<div class="start-content">
 					<div class="text-start-content">
-						<div class="title-section">English <span class="date-galery">Febrero 2020</span></div>
+						<div class="title-section">English <span class="date-galery">Agosto 2021</span></div>
 						<div class="line"></div>
 					</div>
 					<div class="download-info">
 						<a href="#"><img src="images/download.png"> Descarga aquí toda la información</a>
 					</div>
 					<div class="txt-ini">
-						Este programa está especialmente reservado para jugadores con un gusto y habilidad especial para jugar futbol.   Estos jugadores entrenan por periodos de diez meses en ocho estados de la República Mexicana, con ejercicios y planes especiales diseñados por el cuerpo técnico de Sisukas FC, para ser considerados en nuestras selecciones nacionales que compiten en torneos nacionales e internacionales de gran renombre. Los candidatos y miembros deben tener entre 7 y 14 años de edad.
+						Niños y niñas de 10 a 13 años.<br>Viaje al Reino Unido, específicamente Manchester, Inglaterra donde nuestros jugadores participan en un torneo de muy alto nivel deportivo enfrentando a las fuerzas básicas de clubes internacionales además de equipos ingleses, europeos y africanos de gran categoría, visitan los icónicos estadios Old Trafford (Manchester United) y Anfield (Liverpool) para visualizar donde podrían jugar en el futuro y terminan con algunos días culturales y recreativos en Londres. Todo dentro del marco de seguridad integral, refuerzo de hábitos positivos y filosofía de valores humanos de Sisukas FC.  Esta oportunidad está diseñada para que nuestros jugadores experimenten una concentración de selección nacional muy similar a las que tienen los jugadores profesionales.
 					</div>
 					<div class="intern-galery">
 						<div class="item-intern-galery img-galery-h">
@@ -474,7 +475,7 @@
 							</div>
 							<div id="msg-item">
 								<label>Mensaje</label>
-								<textarea></textarea>
+								<textarea name="comment"></textarea>
 							</div>
 							<button type="button" id="button-send">Enviar</button>
 							<div id="txt-final">Tambien puedes comunicarte al 55.54.03.14.17 o mandar un correo a <span>contacto@sisukasfc.mx</span></div>
@@ -492,6 +493,12 @@
 						<div class="line"></div>
 					</div>
 					<div id="quest-content">
+						<div class="quest" id="quest-3">
+							¿Cómo sé si mi hijo/a puede hacer una prueba en Sisukas FC?<span class="arrow-right"></span>
+						</div>
+						<div class="answer" id="answer-3">
+							Todos los niños y niñas con edades entre 4 y 13 años pueden hacer una prueba en cualquier sede nacional de Sisukas FC sin ningún compromiso.  Después de dos sesiones, nuestro equipo deportivo tendrá una junta personal con usted para darle a conocer los resultados y evaluar si su hijo es candidato a alguno de nuestros tres programas de futbol.
+						</div>
 						<div class="quest" id="quest-1">
 							¿Qué programas de futbol ofrece Sisukas FC? <span class="arrow-right"></span>
 						</div>
@@ -517,6 +524,17 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div id="boxes">
+				<div id="dialog" class="window" style="background-color: #f5f5f5;  border-radius: 10px;">
+					<div style="overflow: auto;margin-bottom: 5px;">
+						<div style="width: 25%;"><img class="logoNormal" src="images/logo_tochito.png" style="margin: 0px auto; width: 100%;"></div>
+						<div style="display:none;float: right"><a href="#" class="close"><img style="width: 35px" src="/images/close-btn.png"></a></div>
+					</div>
+					<div id="box-msg" style="clear: both;text-align: center;">¡Registro exitoso!</div>
+					<div class="close" id="ok_btn">Aceptar</div>
+				</div>
+				<div id="mask"></div>
 			</div>
 		</div>
 		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>

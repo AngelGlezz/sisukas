@@ -1,0 +1,57 @@
+<style>
+    .header {
+        background-color:#051F32;
+        width: 500px;
+        height: 150px;
+        margin: 0px auto;
+        position: relative;
+    }
+
+    .logo {
+        background-image: url(http://madden.nfltochito.com.mx/images/logo_tochito.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .cont-txt {
+        width: 300px;
+        margin: 50px auto;
+    }
+
+    .footer {
+        width: 500px;
+        height: 150px;
+        background-image: url(http://madden.nfltochito.com.mx/images/pleca.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        margin: 0px auto;
+    }
+
+    @media (max-width: 500px) {
+        .footer, .header {
+            width: 100%;
+            height: 110px;
+        }
+    }
+</style>
+<div class="header">
+    <div class="logo"></div>
+</div>
+<div class="cont-txt">
+    <h1>Mensaje enviado</h1><br/>
+    <br/>
+    <b>Nombre:</b> {name} {lastname}<br/>
+    <b>E-mail:</b> {email}<br/>
+    <b>Comentario:</b> {comment}<br/>
+</div>
+<div class="footer"></div>
