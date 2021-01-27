@@ -11,7 +11,7 @@
                 $name = utf8_decode($_POST['name']);
                 $lastname = utf8_decode($_POST['lastname']);
                 $email = utf8_decode($_POST['email']);
-                $comment = utf8_decode($_POST['comment']);
+                $message = utf8_decode($_POST['message']);
 
                 if($_POST['name'] != ""){
                     $name = utf8_decode($_POST['name']);
@@ -25,7 +25,7 @@
                     $email = utf8_decode($_POST['email']);
                 }
 
-                $comment = utf8_decode($_POST['comment']);
+                $message = utf8_decode($_POST['message']);
 
                 $_sendTo = array(
                     array(
@@ -38,8 +38,8 @@
                     if (@$mysqli) {
                         if (@$mysqli->options(MYSQLI_OPT_CONNECT_TIMEOUT, 5)) {
                             if (@$mysqli->real_connect($_dbHost, $_dbUser, $_dbPass, $_dbBase, $_dbPort)){
-                                if ($stmt = $mysqli->prepare("INSERT INTO register (name, lastname, email, comment) VALUES (?, ?, ?, ?)")){
-                                    $stmt->bind_param("ssss", $name, $lastname, $email, $comment);
+                                if ($stmt = $mysqli->prepare("INSERT INTO register (name, lastname, email, message) VALUES (?, ?, ?, ?)")){
+                                    $stmt->bind_param("ssss", $name, $lastname, $email, $message);
                                     if ($stmt->execute()) {
                                         $phpmail = new PHPMailer(true);
                                         $phpmail->isSendmail();
@@ -65,8 +65,8 @@
                                             $html = preg_replace('/[\\\\]/i', "", file_get_contents("templates/register.html"));
                                             
                                             $html = str_replace(
-                                                array("{name}", "{lastname}", "{email}", "{comment}"),
-                                                array($name, $lastname, $email, $comment),
+                                                array("{name}", "{lastname}", "{email}", "{message}"),
+                                                array($name, $lastname, $email, $message),
                                                 $html
                                             );
                 

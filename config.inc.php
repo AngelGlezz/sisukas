@@ -1,12 +1,12 @@
 <?php
-$_dbHost = "localhost";
+$_dbHost = "sisukasfc.com";
 $_dbPort = "3306";
-$_dbUser = "madden";
-$_dbPass = "M4dd3n!!!";
-$_dbBase = "madden";
+$_dbUser = "umsdglnrhmypa";
+$_dbPass = "Maradona10+";
+$_dbBase = "db9bgqzt6nhtek";
 
-$_mailNoReplay = "noreply@tikitaka.studio";
-$_nameNoReplay = "Registro Tochito";
+$_mailNoReplay = "noreply@sisukasfc.com";
+$_nameNoReplay = "Registro de mensaje";
 
 $_smtpHost = "smtp.gmail.com";
 $_smtpPort = 587;
