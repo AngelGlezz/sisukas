@@ -39,6 +39,7 @@ input:focus, textarea:focus {
 .page {
     position: relative;
     background-color: #051F32;
+    overflow: hidden;
 }
 
 .principal-section {
@@ -57,6 +58,7 @@ input:focus, textarea:focus {
 #cover {
     background-image: url(../images/fondo-portada.jpg);
     display: block;
+    min-height: 750px;
 }
 
 #logo-main {
@@ -232,12 +234,20 @@ input:focus, textarea:focus {
 }
 
 #origin {
-    background-image: url(../images/fondo-origen.png);
+    background-image: url(../images/fondo-origen.jpg);
 }
 
 .video-content {
     width: 600px;
     margin: auto;
+}
+
+.video-content .slick-prev {
+    left: -50px !important;
+}
+
+.video-content .slick-next {
+    right: -50px !important;
 }
 
 .title-section {
@@ -253,7 +263,9 @@ input:focus, textarea:focus {
 
 .video {
     width: 100%;
-    height: 500px;
+    max-height: 400px;
+    min-height: 200px;
+    height: auto;
     margin-bottom: 50px;
 }
 
@@ -347,7 +359,9 @@ input:focus, textarea:focus {
 }
 
 .galery-content .start-content {
-    height: 420px;
+    min-height: 210px;
+    height: auto!important;
+    max-height: 435px;
 }
 
 .item-galery {
@@ -433,12 +447,14 @@ input:focus, textarea:focus {
 
 .item-intern-galery {
     width: 20%;
-    height: 180px;
     max-width: 300px;
     margin: 2%;
     float: left;
     position: relative;
     overflow: hidden;
+    min-height: 100px;
+    height: auto;
+    max-height: 180px;
 }
 
 .img-galery-h img {
@@ -515,7 +531,10 @@ input:focus, textarea:focus {
 }
 
 #contact .start-content {
-    height: 630px;
+    margin: 0px auto 70px 260px;
+    height: auto !important;
+    overflow: auto;
+    position: initial !important;
 }
 
 #content-form, #form-name, #msg-item {
@@ -595,8 +614,7 @@ input {
 }
 
 .faq-content {
-    margin-left: 300px;
-    margin-top: 100px;
+    margin-left: 270px;
     padding-bottom: 50px!important;
 }
 
@@ -708,6 +726,18 @@ input {
     opacity: 1;
 }
 
+@media screen and (max-height: 700px) {
+    #logo-main {
+        width: 70px;
+        height: 70px;
+        margin: 20px auto;
+    }
+
+    .principal-item {
+        height: 60px !important;
+    }
+}
+
 @media screen and (max-width: 1850px) {
     #content-cover {
         width: 1050px;
@@ -730,10 +760,6 @@ input {
     .start-content {
         left: auto;
         right: 110px;
-    }
-
-    .galery-content .start-content {
-        height: 310px;
     }
 }
 
@@ -776,10 +802,6 @@ input {
         width: 64%;
     }
 
-    .galery-content .start-content {
-        height: 240px;
-    }
-
     .content-competition {
         height: 150px;
     }
@@ -818,10 +840,6 @@ input {
         width: 380px;
     }
 
-    .video {
-        height: 400px;
-    }
-
     .text-start-content {
         width: 100%;
         margin-bottom: 30px;
@@ -833,7 +851,6 @@ input {
 
     #galery .galery-content .start-content {
         width: 50%!important;
-        height: 315px;
         margin-bottom: auto!important;
     }
 
@@ -864,7 +881,7 @@ input {
     }
 
     .item-intern-galery {
-        width: 48%;
+        width: 43%;
     }
 
     #disney-comp .start-content {
@@ -909,14 +926,46 @@ input {
         left: 0px;
         right: 0px;
         top: 0px;
-        margin-top: 65px;
+    }
+
+    #select .start-content, #start .start-content, #student .start-content {
+        overflow: auto;
+        position: initial!important;
+        min-height: 580px!important;
+        margin-bottom: 70px;
+    }
+
+    #student .start-content {
+        min-height: 700px!important;
     }
 
     #galery .galery-content .start-content {
         margin-top: auto;
+        position: initial!important;
     }
 
-    #student .start-content, #english-comp .start-content, #winner-comp .start-content {
+    .galery-content {
+        position: absolute;
+        top: 30%;
+        width: 75%;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+    }
+
+    #galery .galery-content .start-content {
+        width: 80% !important;
+    }
+
+    .slick-prev {
+        left: 10px !important;
+    }
+
+    .slick-next {
+        right: 10px !important;
+    }
+
+    #english-comp .start-content, #winner-comp .start-content {
         top: 90px;
         margin: auto;
     }
@@ -925,12 +974,14 @@ input {
         bottom: -100px;
     }
 
-    .winner-galery .content-competition {
-        bottom: -60px;
+    #contact .start-content {
+        position: initial !important;
+        height: auto!important;
+        margin: 0px auto 70px auto;
     }
 
     .faq-content {
-        margin: 65px auto auto auto;
+        margin: auto;
         width: 90%;
     }
 
@@ -956,6 +1007,22 @@ input {
     .content-competition {
         bottom: 0px!important;
     }
+
+    #galery .galery-content .start-content {
+        width: 80%!important;
+    }
+
+    .item-galery, .slick-list {
+        max-width: 480px!important;
+    }
+
+    .slick-prev {
+        left: -35px !important;
+    }
+
+    .slick-next {
+        right: -35px !important;
+    }
 }
 
 @media screen and (max-width: 440px) {
@@ -980,7 +1047,27 @@ input {
     }
 
     #galery .galery-content .start-content {
-        height: 245px;
+        width: 85%!important;
+    }
+
+    .slick-prev {
+        left: -20px !important;
+    }
+
+    .slick-next {
+        right: -20px !important;
+    }
+
+    #select .start-content {
+        min-height: 625px!important;
+    }
+
+    #start .start-content {
+        min-height: 655px!important;
+    }
+
+    #student .start-content {
+        min-height: 745px !important;
     }
 
     #disney-comp .start-content {
@@ -993,6 +1080,10 @@ input {
 
     .content-competition .title-section {
         margin-top: 15px;
+    }
+
+    .galery-content {
+        width: 90%;
     }
 
     #win {
